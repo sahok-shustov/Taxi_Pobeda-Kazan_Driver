@@ -1,0 +1,63 @@
+<ion-view view-title="Заказ" cache-view="false">
+    <ion-content>
+        <form name="order-form" class="order-form">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <img src="img/rating/blue.png" class="icon-from">
+                    <input type="text" class="form-control input-from" placeholder="Откуда Вас забрать?" id="autocompleteFrom" ng-model="userOrder.from" ng-focus="focus=true; hideButton=true" ng-blur="focus=false;hideButton=false" ng-click="showButtonOnclickMap=false; focus=true" required>
+                </label>
+                <img src="img/rating/path_22.png" class="icon-path">
+                <label class="item item-input item-stacked-label">
+                    <img src="img/rating/red.png" class="icon-from">
+                    <input type="text" class="form-control input-from" placeholder="Куда поедем?" id="autocompleteWhere" ng-model="userOrder.where" ng-focus="focus=true; hideButton=true" ng-blur="focus=false;hideButton=false" ng-click="showButtonOnclickMap=false; focus=true; getGpsByAddressFunction()" required>
+                </label>
+            </div>
+        </form>
+        <div class="focus" ng-show="focus">
+            <ul class="list">
+                <li class="item itemInPrompt" ng-repeat="prompt in prompts" ng-click="insertAddressToInput(prompt.name, prompt.lat, prompt.lon)">
+                    {{prompt.name}}
+                </li>
+            </ul>
+        </div>
+        <form name="orderProperties" class="order-properties" ng-init="showButtonOnclickMap=true" ng-show="!hideButton; showButtonOnclickMap">
+            <div class="row button-properties-up">
+                <div class="col col-33">
+                    <button class="button" ng-click="selectDrivingClass('economy')">
+                        <i class="ion-checkmark-round" ng-show="checked"></i> эконом
+                    </button>
+                </div>
+                <div class="col col-33">
+                    <button class="button" ng-click="selectDrivingClass('business')">
+                        <i class="ion-checkmark-round" ng-show="checked"></i> бизнес
+                    </button>
+                </div>
+                <div class="col col-33">
+                    <button class="button" ng-click="selectDrivingClass('comfort')">
+                        <i class="ion-checkmark-round" ng-show="checked"></i> комфорт
+                    </button>
+                </div>
+            </div>
+            <div class="row button-properties-down">
+                <div class="col col-66">
+                    <button class="button" ng-click="selectDrivingTariff('fixed')">
+                        <i class="ion-checkmark-round" ng-show="checked"></i> фиксированный
+                    </button>
+                </div>
+                <div class="col col-33">
+                    <button class="button" ng-click="selectDrivingTariff('taximeter')">
+                        <i class="ion-checkmark-round" ng-show="checked"></i> таксометр
+                    </button>
+                </div>
+            </div>
+            <div class="row button-order">
+                <div class="col col-100">
+                    <button class="button" ng-click="goToInfoOrderPage()">
+                        Заказать
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div id="map" data-tap-disabled="true" ng-init="initMap()" ng-click="showButtonOnclickMap=true; focus=false"></div>
+    </ion-content>
+</ion-view>

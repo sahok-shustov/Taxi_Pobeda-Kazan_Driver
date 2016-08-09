@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="title">Добавление карты</div>
+        <i class="ion-close modal-close" ng-click="closeModalAddBankCard()"></i>
+    </ion-header-bar>
+    <ion-content class="padding">
+    <div class="divBankCard">
+            <form name="cardForm" class="form-add-card">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label-add-card">Номер карты</span>
+                        <input type="number" name="numderCard" class="card-add" ng-model="addCard.number" placeholder="Номер карты">
+                    </label>
+                    <label class="item item-input item-stacked-label bank-input">
+                        <span class="input-label-add-card">MM/ГГ</span>
+                        <div class="help">
+                            <!-- <i class="ion-help"></i> -->
+                            <input type="text" name="mm_yy" class="card-add" ng-model="addCard.mm_yy" placeholder="MM/ГГ"> 
+                        </div>
+                        
+                    </label>
+                    <label class="item item-input item-stacked-label bank-input">
+                        <span class="input-label-add-card">CCV</span>
+                        <input type="number" name="cvv" class="card-add" ng-model="addCard.cvv" placeholder="CCV">
+                    </label>
+                    
+                </div>
+                <button class="button button-block" ng-click="newCard(); closeModalAddBankCard()">
+                        ДОБАВИТЬ КАРТУ
+                    </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

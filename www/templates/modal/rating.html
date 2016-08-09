@@ -1,0 +1,41 @@
+<ion-modal-view view-title="Оценить">
+    <ion-header-bar class="bar bar-stable">
+        <div class="title" style="color: #fff">Оценить</div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="row">
+            <div class="col col-10">
+                <img src="img/rating/blue.png" alt="">
+                <br>
+                <img src="img/rating/path_22.png" alt="" style="margin-left: 9px;">
+                <br>
+                <img src="img/rating/red.png" alt="">
+            </div>
+            <div class="col">
+                <p>{{details.from}}</p>
+                <p class="adress">{{details.to}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>{{details.tariff}} ({{details.class}})</p>
+            </div>
+            <div class="col col-25 price">
+                {{details.summary}} руб.
+            </div>
+        </div>
+        <hr width="96%">
+        <div class="item item-avatar" href="#" style="border: none">
+            <img src="">
+            <h2><i class="ion-android-star">4.0</i> {{driver.name}}</h2>
+            <p>{{driver.car.brand}} {{driver.car.number}}</p>
+        </div>
+        <hr width="96%">
+        <div class="rating-name">
+            {{ratingNumber}}
+        </div>
+        <rating ng-model="rating.rate" max="rating.max"></rating>
+        {{rating.rate}}
+        <button class="button button-block button-positive send-btn" ng-click="closerating()">Отправить</button>
+    </ion-content>
+</ion-modal-view>

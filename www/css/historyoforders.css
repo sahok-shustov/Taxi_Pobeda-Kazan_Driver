@@ -1,0 +1,39 @@
+.delete-history{
+	position: absolute;
+	bottom: 0;
+	width: 95% !important;
+	margin-left: auto;
+	margin-right: auto;
+	right: 0;
+	left: 0;
+}
+
+.order-number{
+	text-align: center; 
+	line-height: 6em;
+}
+
+.cost{
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
+	font-size: 1rem;
+	color: red;
+	font-weight: bold;
+}
+
+.ion-android-star{
+	padding: 1px;
+}
+
+.stars{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 20px;
+	margin-bottom: 28px;
+}
+
+.last{
+	margin-bottom: 17%;
+}

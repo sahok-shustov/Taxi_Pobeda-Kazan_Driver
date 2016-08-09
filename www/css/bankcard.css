@@ -1,0 +1,97 @@
+.divBankCard {
+	height: 100%;
+    width: 100%;
+}
+
+.divBankCard img {
+    margin: 0 auto;
+    display: block;
+    margin-top: 30%;
+}
+
+.divBankCard p {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.fixed-outside-plus {
+    position: absolute;
+    color: #fff;
+    height: 120px;
+    text-align: center;
+    bottom: -10px !important;
+    right: 20px;
+}
+
+.button-circle {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    float: right;
+    background-color: #de032b;
+    color: white;
+    -webkit-box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.75);
+}
+
+.form-add-card {
+	height: 100%;
+    width: 100%;
+    /*margin-top: 20%;*/
+    text-align: center;
+}
+
+.form-add-card button {
+    width: 95%;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    background-color: #de032b;
+    color: white;
+    position: absolute;
+    bottom: 3%;
+}
+
+.card-add {
+    /*background: transparent !important;*/
+    border-bottom: 1px solid grey !important;
+    border-width: 1px !important;
+    text-align: center !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+}
+
+.card-add:focus {
+    border-bottom: 2px solid black !important;
+}
+
+.input-label-add-card {
+    width: 100%;
+    /*margin: 10px;*/
+    margin-left: 0px;
+    /*font-size: 20px;*/
+    max-width: none;
+    color: #fff;
+}
+
+.bank-input{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/* .help{
+    position: relative;
+} */
+
+/*.ion-help{
+    display: inline-block;
+    position:absolute;
+    z-index:3;
+    line-height: 50px;
+    text-indent: 150px; 
+    right: -2px;
+}*/

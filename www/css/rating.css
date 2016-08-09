@@ -1,0 +1,24 @@
+.send-btn {
+    position: absolute;
+    bottom: 0;
+}
+
+.adress {
+    margin-top: 36px;
+}
+
+.rating {
+    margin-top: 30px;
+    text-align: center;     
+}
+
+.rating-name {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.ion-android-star {
+    color: yellow;
+}

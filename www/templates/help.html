@@ -1,0 +1,17 @@
+<ion-view view-title="Помощь">
+    <ion-content>
+        <ion-list>
+            <div ng-repeat="group in help" class="q">
+                <ion-item class="item-stable item-help" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}" style="background-color: #fff; width: 95%; margin: 0 auto; border-left: none; border-right: none; padding-right: 0px !important; padding-left: 0px !important;">
+                      <div class="row" style="padding-left: 0px; padding-right: 0px">
+                      	<div class="col" style="padding-left: 0px; padding-right: 0px">Использовать банковскую карту</div>
+                      	<div class="col col-10" style="padding-left: 0px; padding-right: 0px; text-align: center !important">&nbsp;<i class="icon icon-help" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i></div>
+                      </div>
+                </ion-item>
+                <ion-item class="item-accordion"  ng-show="isGroupShown(group)" style="border-color: none !important; white-space: normal; border-color: transparent;">
+                    Пользоваться дебетовой картой сбербанка можно на всей територии россии и за её пределами. При использовании дебетовой карты, клиент располагает суммой средств, имеющихся на карте.
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
